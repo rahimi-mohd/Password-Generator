@@ -1,5 +1,12 @@
 # Password-Generator
 Password Generator using python
+-----
+
+Install module using pip
+
+```
+pip install -r requirements.txt
+```
 
 Run `main.py` for latest web app version with flask
 
