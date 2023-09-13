@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block main %}
+
+<form method="post">
+    {{ form.hidden_tag() }}
+    <p>{{ form.lowercase.label }}<br>
+        {{form.lowercase(size=10) }}
+        {% for err in form.lowercase.errors %}
+        <span style="color: red;">{{ err }}</span>
+        {% endfor %}
+    </p>
+
+    <p>{{ form.uppercase.label }}<br>
+        {{form.uppercase(size=10) }}
+        {% for err in form.uppercase.errors %}
+        <span style="color: red;">{{ err }}</span>
+        {% endfor %}
+    </p>
+
+    <p>{{ form.symbols.label }}<br>
+        {{form.symbols(size=10) }}
+        {% for err in form.symbols.errors %}
+        <span style="color: red;">{{ err }}</span>
+        {% endfor %}
+    </p>
+
+    <p>{{ form.save_for.label }}<br>
+        {{form.save_for(size=10) }}
+        {% for err in form.save_for.errors %}
+        <span style="color: red;">{{ err }}</span>
+        {% endfor %}
+    </p>
+
+    <p>{{ form.submit() }}</p>
+</form>
+
+{% endblock %}
